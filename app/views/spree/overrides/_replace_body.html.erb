@@ -4,21 +4,7 @@
   <div class="navbar">
     <div class="navbar-inner">
       <div class="container-fluid">
-        <figure id="logo" data-hook>
-          <%= link_to image_tag(Spree::Config[:logo],  :alt => "Logo", :id => "logo"), root_url, :class =>'brand' %>
-        </figure>
-
-        <ul id="nav-bar" class="nav" data-hook>
-          <li><%= form_tag products_url, :method => :get, :class => 'navbar-form' do %>
-              <input type="search" id="s1" class="search-query" name="keywords" placeholder="Search">
-            <% end %>
-          </li>
-        </ul>
-
-        <ul id="main-nav-bar" class="nav pull-right" data-hook>
-          <li id="link-to-cart" data-hook><%= link_to_cart %></li>
-        </ul>
-
+        <%= render :partial=>'spree/shared/store_header'%>
       </div>
     </div>
   </div>
